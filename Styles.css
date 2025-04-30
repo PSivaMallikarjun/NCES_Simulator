@@ -1,0 +1,84 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f2f4f8;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0077cc;
+}
+
+form label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: bold;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+form input:focus {
+  border-color: #0077cc;
+  outline: none;
+}
+
+button {
+  padding: 12px 18px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+.output {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f0f8ff;
+  border-left: 5px solid #0077cc;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+#chartContainer {
+  margin-top: 40px;
+}
+
+canvas {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.export-buttons {
+  margin-top: 20px;
+  text-align: center;
+}

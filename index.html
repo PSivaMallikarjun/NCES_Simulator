@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Optimizer - Energy Calculator</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🔋 NCES Simulator </h1>
+    <p>A Non-Conventional Energy Sources Calculator and Efficiency Improver using HTML, CSS, and JavaScript using vibe coding. </p>
+
+    <div class="tabs">
+      <button onclick="switchTab('solar')">Solar</button>
+      <button onclick="switchTab('wind')">Wind</button>
+      <button onclick="switchTab('hydro')">Hydro</button>
+      <button onclick="switchTab('biomass')">Biomass</button>
+    </div>
+
+    <div id="solar" class="tab-content active">
+      <h2>☀️ Solar Calculator</h2>
+      <input type="number" id="solarSize" placeholder="Panel Size (kW)" />
+      <input type="number" id="solarHours" placeholder="Sunlight Hours/Day" />
+      <input type="number" id="solarEff" placeholder="Efficiency (%)" />
+      <button onclick="calculate('solar')">Calculate</button>
+    </div>
+
+    <div id="wind" class="tab-content">
+      <h2>🌬️ Wind Calculator</h2>
+      <input type="number" id="windSize" placeholder="Turbine Size (kW)" />
+      <input type="number" id="windSpeed" placeholder="Wind Speed (m/s)" />
+      <input type="number" id="windEff" placeholder="Efficiency (%)" />
+      <button onclick="calculate('wind')">Calculate</button>
+    </div>
+
+    <div id="hydro" class="tab-content">
+      <h2>💧 Hydro Calculator</h2>
+      <input type="number" id="hydroFlow" placeholder="Flow Rate (m³/s)" />
+      <input type="number" id="hydroHead" placeholder="Head Height (m)" />
+      <input type="number" id="hydroEff" placeholder="Efficiency (%)" />
+      <button onclick="calculate('hydro')">Calculate</button>
+    </div>
+
+    <div id="biomass" class="tab-content">
+      <h2>🌱 Biomass Calculator</h2>
+      <input type="number" id="biomassMass" placeholder="Mass (kg)" />
+      <input type="number" id="biomassCal" placeholder="Calorific Value (MJ/kg)" />
+      <input type="number" id="biomassEff" placeholder="Efficiency (%)" />
+      <button onclick="calculate('biomass')">Calculate</button>
+    </div>
+
+    <div id="results">
+      <h3>🔍 Results</h3>
+      <p><strong>Daily Output:</strong> <span id="dailyOut">--</span> kWh</p>
+      <p><strong>Monthly:</strong> <span id="monthlyOut">--</span> kWh</p>
+      <p><strong>Yearly:</strong> <span id="yearlyOut">--</span> kWh</p>
+      <p><strong>Efficiency Tip:</strong> <span id="effTip">--</span></p>
+    </div>
+
+   
+    
+    <div class="export-buttons">
+  <button onclick="exportCSV()">Export CSV</button>
+  <button onclick="exportPDF()">Export PDF</button>
+  <button onclick="saveToLocal()">💾 Save Locally</button>
+  <button onclick="loadFromLocal()">📂 Load Last Result</button>
+</div>
+
+    <canvas id="chartCanvas" width="400" height="200"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
